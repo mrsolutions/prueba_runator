@@ -1,0 +1,45 @@
+{% extends "::base.html.twig" %} 
+
+{% block title %}Prueba Runator - Bienvenido{% endblock %}
+
+{% block body %}
+<div class="container theme-showcase" role="main">
+	<div class="jumbotron">
+		<h1> Prueba de Runator.</h1>
+		<br>
+		<div class="fb-like" data-href="{{ app.request.uri }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+	</div>
+	<strong>1)</strong> Imagina que tienes que ofrecer la posibilidad a ciertos usuarios de ver la temperatura que hizo en un determinado día, así como el país y ciudad exacta para una determinada localización.
+Para ello, nos gustaría que crearas un microservicio aislado que recibirá una localización exacta (compuesta por latitud y longitud) y una fecha, con el fin de ver cómo trabajarías con APIs de terceros.<br><br>
+El proyecto debe aceptar<br>
+GET /geoweather/?date=2015-12-01&hour=12:00:00&lat=39.4621944&lon=-0.3274952<br>
+Esta llamada debería devolver una estructura similar a esta:<br>
+{<br>
+	"date": "2015-12-01",<br>
+	"hour": "12:00:00",<br>
+	"lat": 39.4621944,<br>
+	"lon": 0.3274952,<br>
+	"weather: "sunny",<br>
+	"country": "Spain",<br>
+	"region": "Valencian Community",<br>
+	"city": "Valencia"<br>
+}<br>
+Puedes utilizar cualquier API, aunque aconsejamos Google Maps (Geocoding API) para el primer caso y Open Weather (Geographic Coordinates) para el segundo. Regístrate en los servicios web que necesites y estimes oportuno.
+Se pide entregar un proyecto en PHP completamente funcional, no importa el framework, aunque nos encantaría que fuera en Symfony o Laravel.<br><br>
+<strong>2)</strong> ¿Conoces Facebook? Estamos seguros de que sí. Bien, como sabrás, en Facebook se puede hacer "me gusta" a diferentes tipos de objetos: comentarios, posts, páginas, anuncios, etc...
+Imagina que queremos implementar "Likes" y se te pide diseñar una estructura de datos que permita hacer "me gusta" a cualquier tipo de objeto.
+Realiza el esquema de base de datos con la solución que llevarías a cabo, acompañado de una explicación de la misma. Si decides acompañar la solución con código, puedes incluirlo en la solución del ejercicio anterior o crear otro proyecto aparte, como te sea más cómodo.<br><br>
+Varios consejos extra para ganar puntos:<br>
+<br>
+- En el ejercicio 1, guardar el resultado de todas las peticiones que se hagan en una base de datos de tu elección. <br>
+- Explica las soluciones que has decidido implementar y porqué, para nosotros es importante que sepas comunicarte bien con tu equipo<br>
+- Subir el código y las instrucciones para ejecutarlo a Github
+- Código limpio y ordenado :)<br>
+- Tras acabar envía este documento relleno, con los ficheros que correspondan en un zip y los enlaces correspondientes a Github.<br><br>
+<strong>Ahora que has terminado...</strong><br>
+
+- ¿Te has sentido capaz de llevarla a cabo tras leerla?<br>
+- ¿Cuánto tiempo te ha costado llevarla a cabo?<br>
+- Del 1 al 10, ¿Cómo valorarías la dificultad de este test?<br>
+</div>
+{% endblock %}

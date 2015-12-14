@@ -1,0 +1,19 @@
+prueba_inicio:
+    path:     /
+    defaults: { _controller: PruebaMainBundle:Inicio:inicio }
+
+prueba_clima:
+    path:     /clima
+    defaults: { _controller: PruebaMainBundle:Inicio:clima }
+
+prueba_info:
+    path:     /info
+    defaults: { _controller: PruebaMainBundle:Inicio:info }
+
+prueba_contacto:
+    path:     /contacto
+    defaults: { _controller: PruebaMainBundle:Inicio:contacto }
+
+prueba_lista:
+    path:     /lista
+    defaults: { _controller: PruebaMainBundle:Inicio:lista }

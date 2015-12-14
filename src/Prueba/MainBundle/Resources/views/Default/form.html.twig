@@ -1,0 +1,45 @@
+{% extends "::base.html.twig" %} 
+
+{% block title %}Prueba Runator - Temperatura{% endblock %}
+
+{% block body %}
+<div class="container theme-showcase" role="main">
+	<div class="jumbotron">
+	{{ form_start(form) }}
+	    <table>
+	    	<tr>
+	    		<td class="form_error">{{ form_errors(form) }}</td>
+	    		<td></td>
+	    		<td></td>
+    		</tr>
+    		<tr>
+	    		<td class="form_error">{{ form_errors(form.lat) }}</td>
+	    		<td class="form_label">{{ form_label(form.lat) }}</td>
+	    		<td class="form_input">{{ form_widget(form.lat) }}</td>
+    		</tr>
+    		<tr>
+	    		<td class="form_error">{{ form_errors(form.lon) }}</td>
+	    		<td class="form_label">{{ form_label(form.lon) }}</td>
+	    		<td class="form_input">{{ form_widget(form.lon) }}</td>
+    		</tr>
+    		<tr>
+	    		<td class="form_error">{{ form_errors(form.fecha) }}</td>
+	    		<td class="form_label">{{ form_label(form.fecha) }}</td>
+	    		<td class="form_input">{{ form_widget(form.fecha) }}</td>
+    		</tr>
+    		<tr>
+	    		<td class="form_error">{{ form_errors(form.hora) }}</td>
+	    		<td class="form_label">{{ form_label(form.hora) }}</td>
+	    		<td class="form_input">{{ form_widget(form.hora) }}</td>
+    		</tr>
+    		<tr>
+    			<td></td>
+    			<td>{{ form_widget(form.enviar) }}</td>
+    			<td></td>
+    		</tr>
+	    </table> 
+	    {{ form_end(form) }}
+	    <br>
+	    <div class="fb-like col-sm-12" data-href="{{ app.request.uri }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+	    
+{% endblock %}

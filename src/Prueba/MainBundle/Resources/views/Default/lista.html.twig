@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %} 
+
+{% block title %}Prueba Runator - Contacto{% endblock %}
+
+{% block body %}
+<div class="container theme-showcase" role="main">
+	<br><br><br>
+	<div class="fb-like" data-href="{{ app.request.uri }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+	<br>
+		<h4>Lista:</h4><br>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Fecha</th>
+			<th>Hora</th>
+			<th>Latitud</th>
+			<th>Longitud</th>
+			<th>Tiempo</th>
+			<th>País</th>
+			<th>Región</th>
+			<th>Población</th>
+		</tr>
+			{% for entrada in entradas %}
+			<tr>
+				<td>{{ entrada.id }}</td>
+				<td>{{ entrada.fecha|date('d-m-Y') }}</td>
+				<td>{{ entrada.hora|date('H:i:s') }}</td>
+				<td>{{ entrada.lat }}</td>
+				<td>{{ entrada.lon }}</td>
+				<td>{{ entrada.poblacion }}</td>
+				<td>{{ entrada.tiempo }}</td>
+				<td>{{ entrada.pais }}</td>
+				<td>{{ entrada.region }}</td>				
+			</tr>
+			{% endfor %}
+		</table>
+</div>
+{% endblock %}
